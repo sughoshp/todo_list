@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show-task</title>
+</head>
+<body>
+{% for task in task_list %}
+{% if task.completed %}
+<h3><s>{{ task.task}} </s></h3>
+{% else %}
+<h3>{{ task.task}}</h3>
+{% endif %}
+{% endfor %}
+<a href="signout"><button>Signout</button></a>
+</body>
+</html>
